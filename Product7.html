@@ -521,6 +521,7 @@
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
+      console.log('gdfghds')
       if ((document.getElementById('otpValue').value === EmailOtp) && (document.getElementById("otpValue").value.length === 6)) {
         $('#otpValue').removeClass("is-invalid");
         otpError.innerHTML = "";
