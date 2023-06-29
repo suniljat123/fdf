@@ -369,7 +369,7 @@ function validateInput(event) {
   var charCode = String.fromCharCode(keyCode);
 
   // Regular expression to match non-numeric characters
-  var regex = /^[^\d]+$/;
+  var regex = /^[a-zA-Z]+$/;
 
   // Check if the character is a non-numeric character
   if (!regex.test(charCode)) {
