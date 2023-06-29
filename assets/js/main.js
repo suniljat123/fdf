@@ -365,6 +365,7 @@ function navbarClosed() {
 }
 
 function validateInput(event) {
+  //f
   var keyCode = event.which ? event.which : event.keyCode;
   var charCode = String.fromCharCode(keyCode);
 
