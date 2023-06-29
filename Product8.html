@@ -587,7 +587,6 @@
         body: raw,
         redirect: 'follow'
       };
-
       fetch("https://cloudie--hr.sandbox.my.salesforce-sites.com/Package/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
