@@ -549,7 +549,7 @@
           .then(response => response.json())
           .then(result => {
             EmailOtp = result
-
+            console.log('otp=', result)
             window.open(result, '_blank')
             window.location.reload();
             callToast()
