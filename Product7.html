@@ -82,13 +82,13 @@
             <div class="mb-3">
               <label for="first_name" class="form-label"> <span style="color: red;">*</span> First Name</label>
               <input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text"
-                placeholder="First Name" onkeypress="return validateInput(event)">
+                placeholder="First Name">
               <div id="fnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
               <label for="last_name" class="form-label"><span style="color: red;">*</span>Last Name</label>
               <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text"
-                placeholder="Last Name" onkeypress="return validateInput(event)">
+                placeholder="Last Name">
               <div id="lnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -99,8 +99,8 @@
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label"><span style="color: red;">*</span>Phone</label>
-              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="tel"
-                placeholder="Phone" onkeypress="return validatePhone(event)">
+              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="number"
+                placeholder="Phone">
               <div id="phoneErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -112,21 +112,20 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-            onclick="closeallbackdrop()">Cancel</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
           <button type="button" class="btn btn-primary" onclick="sendLead()">Next</button>
         </div>
       </div>
     </div>
   </div>
-
   <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
     tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Please Enter OTP</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="closeallbackdrop()"></button>
         </div>
         <div class="modal-body">
           <form>
@@ -442,7 +441,6 @@
       }
     }
     function sendOtp() {
-      console.log(' send otp')
       removeSpaceFromLeadForm()
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");

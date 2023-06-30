@@ -435,7 +435,7 @@ function sendLead() {
     if (email.length == 0) {
       emailError.innerHTML = "Please enter Email\r\n";
     } else {
-      emailError.innerHTML = "Please Enter Correct Email\r\n";
+      emailError.innerHTML = "Please Enter valid Email\r\n";
     }
   } else if (
     email.length > 0 &&
@@ -445,9 +445,12 @@ function sendLead() {
     emailError.innerHTML = "";
   }
 
-  if (phone.length !== 10) {
+  if (phone.length === 0) {
     $("#phone").addClass("is-invalid");
-    phoneError.innerHTML = "Please Enter Correct Phone Number\r\n";
+    phoneError.innerHTML = "Please enter Phone Number\r\n";
+  } else if (phone.length !== 10) {
+    $("#phone").addClass("is-invalid");
+    phoneError.innerHTML = "Please enter Valid Phone Number\r\n";
   } else if (phone.length === 10 && $("#phone").hasClass("is-invalid")) {
     $("#phone").removeClass("is-invalid");
     phoneError.innerHTML = "";
@@ -473,7 +476,6 @@ function sendLead() {
     $("#staticBackdrop").modal("hide");
     const modal2 = new bootstrap.Modal("#exampleModalToggle2");
     modal2.show();
-    console.log("sendlead");
     sendOtp();
   }
 }
