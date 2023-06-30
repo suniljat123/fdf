@@ -490,3 +490,6 @@ function closeallbackdrop() {
 function showFirstModal() {
   $("#staticBackdrop").modal("show");
 }
+function goBack() {
+  document.getElementById("otpValue").value = "";
+}
