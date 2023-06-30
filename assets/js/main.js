@@ -473,6 +473,7 @@ function sendLead() {
     $("#staticBackdrop").modal("hide");
     const modal2 = new bootstrap.Modal("#exampleModalToggle2");
     modal2.show();
+    console.log("sendlead");
     sendOtp();
   }
 }
