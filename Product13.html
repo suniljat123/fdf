@@ -575,31 +575,19 @@
     }  
   </script>
   <script>
-    $(document).ready(function () {
-      $(".customer-logos").slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 4,
-            },
-          },
-          {
-            breakpoint: 520,
-            settings: {
-              slidesToShow: 3,
-            },
-          },
-        ],
-      });
-    });
+    function closeallbackdrop() {
+      document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
+      document.getElementById("first_name").value = "";
+      document.getElementById("last_name").value = "";
+      document.getElementById("company").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+    }
+    function showFirstModal() {
+      $("#staticBackdrop").modal("show");
+    }
+
+
   </script>
 
 </body>
