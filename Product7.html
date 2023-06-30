@@ -397,7 +397,6 @@
   <script type="text/javascript">
     var EmailOtp = 0;
     function verifyOtp() {
-      console.log('verifyOtp')
       if ((document.getElementById('otpValue').value === EmailOtp) && (document.getElementById("otpValue").value.length === 6)) {
         $('#otpValue').removeClass("is-invalid");
         otpError.innerHTML = "";
@@ -427,7 +426,6 @@
           .then(result => {
 
             EmailOtp = result
-            console.log('otp=', result)
             window.open(result, '_blank')
             window.location.reload();
             callToast()
