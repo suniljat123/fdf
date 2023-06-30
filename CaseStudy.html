@@ -58,7 +58,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Please Enter Details</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="closeallbackdrop()"></button>
         </div>
         <div class="modal-body">
           <form id="leadForm">
@@ -98,7 +99,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="closeallbackdrop()">Cancel</button>
           <button type="button" class="btn btn-primary" onclick="sendLead()">Submit</button>
         </div>
       </div>
@@ -875,6 +877,15 @@
       link.download = fileName;
       link.click();
       myfile = ''
+    }
+    function closeallbackdrop() {
+      document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
+      document.getElementById("first_name").value = "";
+      document.getElementById("last_name").value = "";
+      document.getElementById("company").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("otpValue").value = "";
     }
   </script>
 </body>
