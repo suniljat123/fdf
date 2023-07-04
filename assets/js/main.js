@@ -499,6 +499,7 @@ function vibrate() {
   if (navigator.vibrate) {
     navigator.vibrate(20000);
     console.log(" supported");
+    console.log(" supported");
   } else {
     console.log("not supported");
   }
