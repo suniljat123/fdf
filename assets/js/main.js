@@ -497,7 +497,8 @@ function vibrate() {
   console.log("vibrate call");
 
   if (navigator.vibrate) {
-    navigator.vibrate(200);
+    navigator.vibrate(20000);
+    console.log(" supported");
   } else {
     console.log("not supported");
   }
