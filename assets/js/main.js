@@ -495,5 +495,10 @@ function goBack() {
 }
 function vibrate() {
   console.log("vibrate call");
-  navigator.vibrate(200);
+
+  if (navigator.vibrate) {
+    navigator.vibrate(200);
+  } else {
+    console.log("not supported");
+  }
 }
