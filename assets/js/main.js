@@ -394,6 +394,7 @@ function validatePhone(event) {
 }
 
 function sendLead() {
+  document.getElementById("otpValue").value = "";
   let fname = document.getElementById("first_name").value;
   fname = fname.trim();
   let lname = document.getElementById("last_name").value;
@@ -412,7 +413,7 @@ function sendLead() {
   emailError = document.getElementById("emailErr");
   if (fname.length < 1) {
     $("#first_name").addClass("is-invalid");
-    fNameError.innerHTML = "Please enter Firstname\r\n";
+    fNameError.innerHTML = "Please enter First Name\r\n";
   } else if (fname.length > 0 && $("#first_name").hasClass("is-invalid")) {
     $("#first_name").removeClass("is-invalid");
     fNameError.innerHTML = "";
@@ -420,7 +421,7 @@ function sendLead() {
 
   if (lname.length < 1) {
     $("#last_name").addClass("is-invalid");
-    lNameError.innerHTML = "Please enter Lastname\r\n";
+    lNameError.innerHTML = "Please enter Last Name\r\n";
   } else if (lname.length > 0 && $("#last_name").hasClass("is-invalid")) {
     $("#last_name").removeClass("is-invalid");
     lNameError.innerHTML = "";
@@ -479,28 +480,11 @@ function sendLead() {
     sendOtp();
   }
 }
-function closeallbackdrop() {
-  document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
-  document.getElementById("first_name").value = "";
-  document.getElementById("last_name").value = "";
-  document.getElementById("company").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("phone").value = "";
-}
+
 function showFirstModal() {
   $("#staticBackdrop").modal("show");
 }
 function goBack() {
-  document.getElementById("otpValue").value = "";
-}
-function vibrate() {
-  console.log("vibrate call");
-
-  if (navigator.vibrate) {
-    navigator.vibrate(20000);
-    console.log(" supported");
-    console.log(" supported");
-  } else {
-    console.log("not supported");
-  }
+  $("#exampleModalToggle2").modal("hide");
+  $("#staticBackdrop").modal("show");
 }

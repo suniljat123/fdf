@@ -84,13 +84,13 @@
             <div class="mb-3">
               <label for="first_name" class="form-label"> <span style="color: red;">*</span> First Name</label>
               <input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text"
-                placeholder="First Name">
+                placeholder="First Name" onkeypress="return validateInput(event)">
               <div id="fnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
               <label for="last_name" class="form-label"><span style="color: red;">*</span>Last Name</label>
               <input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text"
-                placeholder="Last Name">
+                placeholder="Last Name" onkeypress="return validateInput(event)">
               <div id="lnameErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -101,8 +101,8 @@
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label"><span style="color: red;">*</span>Phone</label>
-              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="number"
-                placeholder="Phone">
+              <input class="form-control" id="phone" maxlength="10" name="phone" size="20" type="tel"
+                placeholder="Phone" onkeypress="return validatePhone(event)">
               <div id="phoneErr" style="padding-left: 5px;color: red;"></div>
             </div>
             <div class="mb-3">
@@ -140,8 +140,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-target="#staticBackdrop" data-bs-toggle="modal"
-            onclick="goBack()">Go
+          <button type="button" class="btn btn-secondary" onclick="goBack()">Go
             Back</button>
           <button class="btn btn-primary" onclick="sendOtp()">Resend </button>
           <button class="btn btn-primary" onclick="verifyOtp()">Verify</button>
@@ -467,7 +466,6 @@
       fetch("https://cloudie.my.salesforce-sites.com/InternalApps/services/apexrest/verifyOtpdata", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log('result=', result)
           EmailOtp = result
 
         })
@@ -475,6 +473,7 @@
 
     }
     function closeallbackdrop() {
+      removeInvalidClasses();
       document.querySelectorAll(".modal-backdrop").forEach((el) => el.remove());
       document.getElementById("first_name").value = "";
       document.getElementById("last_name").value = "";
@@ -482,6 +481,18 @@
       document.getElementById("email").value = "";
       document.getElementById("phone").value = "";
       document.getElementById("otpValue").value = "";
+    }
+    function removeInvalidClasses() {
+      $('#first_name').removeClass("is-invalid");
+      $('#last_name').removeClass("is-invalid");
+      $('#email').removeClass("is-invalid");
+      $('#phone').removeClass("is-invalid");
+      $('#company').removeClass('is-invalid');
+      document.getElementById("fnameErr").innerHTML = '';
+      document.getElementById("lnameErr").innerHTML = '';
+      document.getElementById("phoneErr").innerHTML = '';
+      document.getElementById("companyErr").innerHTML = '';
+      document.getElementById("emailErr").innerHTML = '';
     }
     function showFirstModal() {
       $("#staticBackdrop").modal("show");

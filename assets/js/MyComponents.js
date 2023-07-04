@@ -30,7 +30,7 @@ class Footer extends HTMLElement {
           <div>
             <h4>Reservations</h4>
             <p>
-              <strong>Phone:</strong> +91 124 6080 102<br>
+              <strong>Phone:</strong> <a href="tel:+911246080102" style="color: #ffffff">+91 124 6080 102</a> <br>
               <strong>Email:</strong> <a href="mailto: info@cloudcertitude.com"
                 style="color: #ffffff; ">info@cloudcertitude.com</a><br>
             </p>
@@ -875,7 +875,7 @@ class Whatsapp_Chat extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = ` <div style="position: fixed;bottom: 10px;z-index: 36;right: 22px;" class="Whatsapp d-block" id="whatsapp_logo">
-    <a href="https://wa.me/918390188805" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
+    <a href=" https://wa.me/918390188805?text=Hello" target="_blank"> <img src="./assets/img/Whatsapp_Logo.png" alt="Whatsapp_Logo"
         style="width: 50px;"></a>
 
     <!-- <i class="bi bi-whatsapp" style="color: #198754; font-size: 40px;"></i> -->
