@@ -493,3 +493,7 @@ function showFirstModal() {
 function goBack() {
   document.getElementById("otpValue").value = "";
 }
+function vibrate() {
+  console.log("vibrate call");
+  navigator.vibrate(200);
+}
