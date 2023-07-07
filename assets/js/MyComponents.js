@@ -30,7 +30,7 @@ class Footer extends HTMLElement {
           <div>
             <h4>Reservations</h4>
             <p>
-              <strong>Phone:</strong> <a href="tel:+911246080102" style="color: #ffffff">+91 124 6080 102</a> <br>
+              <strong>Phone:</strong> <a href="tel:+919999105081" style="color: #ffffff">+91 9999105081</a> <br>
               <strong>Email:</strong> <a href="mailto: info@cloudcertitude.com"
                 style="color: #ffffff; ">info@cloudcertitude.com</a><br>
             </p>
@@ -41,13 +41,12 @@ class Footer extends HTMLElement {
           <i class="bi bi-clock icon"></i>
           <div>
             <h4>Opening Hours</h4>
-            <p>
+            <p> 
               <strong>Mon - Fri: </strong>10 AM - 7 PM IST<br>
-               <strong>Sun - Sat:</strong> Closed
+               <strong>Sat - Sun:</strong> Closed
             </p>
           </div>
-        </div>
-
+        </div> 
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Follow Us</h4>
 
@@ -370,7 +369,7 @@ class Navbar extends HTMLElement {
               <li><a href="#testimonials" onclick="navbarClosed()">Testimonials</a></li>
 
               <li><a href="#team" onclick="navbarClosed()">Leadership</a></li>
-              <li><a href="Carrer.html">Careers</a></li>
+              <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
@@ -612,7 +611,7 @@ class AllNavbar extends HTMLElement {
               <li><a href="./index.html#about">About us</a></li>
                <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="./index.html#team">Leadership</a></li>
-              <li><a href="Carrer.html">Careers</a></li>
+              <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
@@ -854,7 +853,7 @@ class ContactCareerNavbar extends HTMLElement {
               <li><a href="./index.html#testimonials">Testimonials</a></li>
 
               <li><a href="./index.html#team">Leadership</a></li>
-              <li><a href="Carrer.html">Careers</a></li>
+              <li><a href="Career.html">Careers</a></li>
               <li><a href="CaseStudy.html">Case Study</a></li>
               <li><a href="Contact.html">Contact us</a></li>
             </ul>
